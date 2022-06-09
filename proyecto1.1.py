@@ -23,11 +23,9 @@ print("\t\t\tBienvenido a Vuelos Duoc\n \t\t\t")
 print(" 1.Ver asientos disponibles\n 2.Comprar asiento\n 3.Anular vuelo\n 4.Modificar datos de pasajero\n 5.Salir")
 print()
 print("*"*66)
-
 op = 5
 while op !=6:
  op = int(input("Por favor seleccione una opcion (1-5): "))
- 
  print()
  if op == 1:
    print("\t\t asientos normales del 1 al 30 $78900")
@@ -49,8 +47,7 @@ while op !=6:
    print("|                                                                |")
    print("|\t 37 \t 38 \t 39 \t\t 40 \t 41 \t 42 \t |")
    print()
-   print("\t\t asinetos vip del 31 al 42 $240000")
-   
+   print("\t\t asinetos vip del 31 al 42 $240000") 
  if op == 2:
   print("A escogido la opcion 2, complete el registro porfavor.") 
   print("PORFAVOR INGRESE SUS DATOS CORRECTOS O SI NO SE REINICIARA EL SISTEMA")
@@ -102,10 +99,7 @@ while op !=6:
   else:
     print("ingrese un rut valido")
     print()
- 
  if op == 3:
-     
-    
     print()
     print("opcion 3 (anular compra)")
     buscar = int(input("Ingrese el rut a consultar: "))
@@ -118,26 +112,28 @@ while op !=6:
     else:
      print("No existe registro de este rut.")
      print()
- 
  if op == 4:
    print()
    opcion = 3
    while opcion !=4:
-    opcion = int(input("Seleccione el dato a modificar: \n1-Nombre: \n2-telefono: \n3-salir al menu principal"))
+    opcion = int(input("Seleccione el dato a modificar: \n1-Nombre: \n2-Rut: \n3-Telefono: \n4-Salir al menu principal: \n"))
     print()
     if opcion == 1:
       usuario.pop(0)
       nuevonombre = input("ingrese un nuevo Nombre: ")
       usuario.insert((0), nuevonombre)
     if opcion == 2:
+      usuario.pop(1)
+      nuevorut = input("Ingrese un nuevo Rut: ")
+      usuario.insert((1), nuevorut)
+    if opcion == 3:
       usuario.pop(2)
       nuevotelefono = input("Ingrese un nuevo Telefono: ")
       usuario.insert((2), nuevotelefono)
-    if opcion == 3:
-      print("Volver al menu principal")
+    if opcion == 4:
+     print("Volver al menu principal")
      print(registro)
-      print()
- 
+     print()
  if op == 5:
    print()
    sys.stderr.write("Gracias por elegir Vuelos Duoc")
