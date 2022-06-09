@@ -1,2 +1,2 @@
 # proyectoDuoc
-a fly buy tickets system
+flight ticket sales system
